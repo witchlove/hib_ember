@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row" >
+        <div class="col-md-8">
+        <div class="table-responsive">
+             <table class="table-bordered table-striped" width="100%">
+                <tr>
+                    <th>WORKING</th>
+                    <th>Plaats</th>
+                    <th>Prijs</th>
+                    <th>Aantal kamers</th>
+                    <th>Tehuur</th>
+                    <th>Tekoop</th>
+                    <th></th>
+                </tr>
+                {{#each house in controller}}
+                                <tr>
+                                   <td align="center"><img src="{{ unbound house.thumbnail}}"></img></td>
+                                   <td>{{house.location}}</td>
+                                   <td>{{house.price}}</td>
+                                   <td>{{house.rooms}}</td>
+                                   <td>{{house.rent}}</td>
+                                   <td>{{house.sell}}</td>
+                                   <td>{{#link-to 'house' house}} Info {{/link-to}}</td>
+                                </tr>
+                {{/each}}
+            </table>
+        </div>
+        </div>
+
+    </div>
+</div>
